@@ -8,6 +8,7 @@ function App() {
     fetch("http://api.sr.se/api/v2/channels?format=json&size=10")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setChannels(data.channels);
       });
   }, []);
